@@ -1045,7 +1045,11 @@ let quotes = [
     },
     {  
        "quote":"“Your time is limited, so don’t waste it living someone else’s life. Don’t be trapped by dogma",
-       "author":"which is living with the results of other people’s thinking. Don’t let the noise of other’s opinions drown out your own inner voice. And most important, have the courage to follow your heart and intuition. They somehow already know what you truly want to become. Everything else is secondary.”"
+       "author":"A wise man"
+    },
+    {
+        "quote":"which is living with the results of other people’s thinking. Don’t let the noise of other’s opinions drown out your own inner voice. And most important, have the courage to follow your heart and intuition. They somehow already know what you truly want to become. Everything else is secondary.”",
+        "author": "Steve Jobs"
     },
     {  
        "quote":"“Don’t be cocky. Don’t be flashy. There’s always someone better than you.",
@@ -1118,10 +1122,6 @@ let quotes = [
     {  
        "quote":"“It’s almost always harder to raise capital than you thought it would be, and it always takes longer. So plan for that.",
        "author":"Richard Harroch, Venture Capitalist"
-    },
-    {  
-       "quote":"“For all of the most important things, the timing always sucks. Waiting for a good time to quit your job? The stars will never align and the traffic lights of life will never all be green at the same time. The universe doesn’t conspire against you, but it doesn’t go out of its way to line up the pins either. Conditions are never perfect. “Someday is a disease that will take your dreams to the grave with you. Pro and con lists are just as bad. If it’s important to you and you want to do it “eventually, just do it and correct course along the way.",
-       "author":"Timothy Ferriss, author of The 4-Hour Work Week"
     },
     {  
        "quote":"“I don’t have big ideas. I sometimes have small ideas, which seem to work out.",
@@ -1356,11 +1356,14 @@ let quotes = [
  ];
 
 
+ let i = 0;
  let $randomBtn = $('.randomBtn');
  let $bgBtn = $('.bgBtn');
  let $fontBtn = $('.fontBtn');
  let $prevQuote = $('.prevBtn');
+ let $nextQuote = $('.nextBtn');
  let $bgimgBtn = $('.bgimgBtn');
+ let $container = $('#quoteContainer');
 
 
  $bgimgBtn.click( function(){
@@ -1371,32 +1374,33 @@ let quotes = [
  })
 
 
- $prevQuote.click( function(){
-     for(i = 0; i <= quotes.length-1; i++){
-        $('h1#quote').html(quotes[i].quote);
-        $('p#author').html('<span>--</span>' + quotes[i].author);
-     }
- });
-
-
-
  $fontBtn.click( function(){
     let font = Math.floor(Math.random()*fonts.length);
     $('h1#quote').css('font-family', fonts[font]);
+    $('h6#author').css('font-family', fonts[font]);
+
  })
 
 
  $bgBtn.click( function(){
     let color = Math.floor(Math.random()*colors.length);
-    $('main').css('background', colors[color]);
+    $('.check').css('background', colors[color]);
 
  });
-
 
 
  $randomBtn.click( function(){
      let number = Math.floor(Math.random()*quotes.length);
 
      $('h1#quote').html(quotes[number].quote);
-     $('p#author').html('<span>~ </span>' + quotes[number].author);
+     $('h6#author').html('<span>~ </span>' + quotes[number].author);
  });
+
+ $nextQuote.click( function(){
+    console.log("working through faith");
+    while(i < quotes.length){
+        console.log("working through faith");
+        $('h1#quote').html(quotes[i].quote);
+        $('h6#author').html('<span>~ </span>' + quotes[i].author);
+    };
+});

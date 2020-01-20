@@ -14,7 +14,7 @@ body{
     position: relative;
 }
 
-.qouteContainer{
+#qouteContainer{
     width: 60%;
     height: max-content;
     background-color: rgba(0, 0, 0, 0.2);
@@ -35,6 +35,7 @@ body{
 #author{
     color: white;
     font-size: 15px;
+    padding: 10px;
 }
 
 main{
