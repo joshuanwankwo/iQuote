@@ -4,27 +4,33 @@
     <meta charset="UTF-8">
     <script src="https://kit.fontawesome.com/8470b880ab.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com.jquery-3.4.1.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="../jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>iQuote</title>
 </head>
 <body>
+    <header>
+        <h1>ilu</h1> 
+        <i class="fas fa-bars"></i>
+    </header>
 
     <main>
-        <div id="qouteContainer">
-            <h1 id="quote">If your Dreams don't scare you, then they are not big enough</h1>
-            <h6 id="author">~Steve Josh</h6>
+        <div id="outerCont">
+            <div id="qouteContainer" >
+                <h1 id="quote">If your Dreams don't scare you, then they are not big enough</h1>
+                <h6 id="author">~Steve Josh</h6>
+                <span id="quoteIndex" style="color:white; display:none"></span>
+            </div>
         </div>
-        <div class="check" style="height: 20px; width: 20px;"></div>
     </main>
     <div id="control">
         <div id="mainControl">
-            <i class="prevBtn fas fa-angle-left" title="See previous quote"></i>
+            <i class="prevBtn fas fa-angle-left" id="btnLeft" title="See previous quote"></i>
             <i class="randomBtn fas fa-random" title="View randomly"></i>
-            <i class="nextBtn fas fa-angle-right" title="See next quote"></i>
+            <i class="nextBtn fas fa-angle-right" id="btnRight" title="See next quote"></i>
         </div>
+
         <div id="moreControl">
             <i class="fontBtn fas fa-font" title="Chage your font style"></i> 
             <i class="bgimgBtn fas fa-image" title="Change your background image"></i>  

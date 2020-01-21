@@ -1301,20 +1301,30 @@ let quotes = [
     }
  ]
 
- let colors = ['#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6', 
- '#E6B333', '#3366E6', '#999966', '#99FF99', '#B34D4D',
- '#80B300', '#809900', '#E6B3B3', '#6680B3', '#66991A', 
- '#FF99E6', '#CCFF1A', '#FF1A66', '#E6331A', '#33FFCC',
- '#66994D', '#B366CC', '#4D8000', '#B33300', '#CC80CC', 
- '#66664D', '#991AFF', '#E666FF', '#4DB3FF', '#1AB399',
- '#E666B3', '#33991A', '#CC9999', '#B3B31A', '#00E680', 
- '#4D8066', '#809980', '#E6FF80', '#1AFF33', '#999933',
- '#FF3380', '#CCCC00', '#66E64D', '#4D80CC', '#9900B3', 
- '#E64D66', '#4DB380', '#FF4D4D', '#99E6E6', '#6666FF',
- '#1abc9c', '#2ecc71', '#3498db', '#9b59b6', '#34495e',
- '#16a085', '#27ae60', '#2980b9', '#8e44ad', '#2c3e50',
- '#f1c40f', '#e67e22', '#e74c3c', '#95a5a6', '#f39c12',
- '#d35400', '#c0392b', '#bdc3c7', '#7f8c8d'];
+ let someColors = [
+   '#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6', 
+   '#E6B333', '#3366E6', '#999966', '#99FF99', '#B34D4D',
+   '#80B300', '#809900', '#E6B3B3', '#6680B3', '#66991A', 
+   '#FF99E6', '#CCFF1A', '#FF1A66', '#E6331A', '#33FFCC',
+   '#66994D', '#B366CC', '#4D8000', '#B33300', '#CC80CC', 
+   '#66664D', '#991AFF', '#E666FF', '#4DB3FF', '#1AB399',
+   '#E666B3', '#33991A', '#CC9999', '#B3B31A', '#00E680', 
+   '#4D8066', '#809980', '#E6FF80', '#1AFF33', '#999933',
+   '#FF3380', '#CCCC00', '#66E64D', '#4D80CC', '#9900B3', 
+   '#E64D66', '#4DB380', '#FF4D4D', '#99E6E6', '#6666FF',
+   '#1abc9c', '#2ecc71', '#3498db', '#9b59b6', '#34495e',
+   '#16a085', '#27ae60', '#2980b9', '#8e44ad', '#2c3e50',
+   '', '',  
+ ]
+
+ let colors = [
+ 'rgba(211, 84, 0, 0.4)', 'rgba(192, 57, 43, 0.4)',
+ 'rgba(189, 195, 199, 0.4)', ' rgba(127, 140, 141, 0.4)',
+ 'rgba(243, 156, 18, 0.4)', 'rgba(149, 165, 166, 0.4)',
+ 'rgba(231, 76, 60, 0.4)', 'rgba(230, 126, 34, 0.4)',
+ 'rgba(241, 196, 15, 0.4)'
+
+];
 
  let fonts = [
     'Arial, sans-serif',
@@ -1356,7 +1366,6 @@ let quotes = [
  ];
 
 
- let i = 0;
  let $randomBtn = $('.randomBtn');
  let $bgBtn = $('.bgBtn');
  let $fontBtn = $('.fontBtn');
@@ -1364,12 +1373,13 @@ let quotes = [
  let $nextQuote = $('.nextBtn');
  let $bgimgBtn = $('.bgimgBtn');
  let $container = $('#quoteContainer');
+ let $quoteIndex = $('span#quoteIndex');
+ let $currentQuote;
 
 
  $bgimgBtn.click( function(){
      let image = Math.floor(Math.random()*images.length);
      let currentImage = 'url(./imgs/' + images[image] + '.jpg)'
-     console.log(currentImage);
      $('main').css('background-image', currentImage )
  })
 
@@ -1384,7 +1394,7 @@ let quotes = [
 
  $bgBtn.click( function(){
     let color = Math.floor(Math.random()*colors.length);
-    $('.check').css('background', colors[color]);
+    $('div#outerCont').css('background', colors[color]);
 
  });
 
@@ -1397,10 +1407,28 @@ let quotes = [
  });
 
  $nextQuote.click( function(){
-    console.log("working through faith");
-    while(i < quotes.length){
-        console.log("working through faith");
-        $('h1#quote').html(quotes[i].quote);
-        $('h6#author').html('<span>~ </span>' + quotes[i].author);
-    };
+    $currenetQuote = parseInt(quoteIndex.innerText)
+
+    if($currentQuote < quotes.length -1){
+       $currentQuote++;
+    }else if($currentQuote = quotes.length -1){
+       $currentQuote = 0;
+    }
+    quoteIndex.innerText = $currentQuote;
+    $('h1#quote').html(quotes[$currentQuote].quote);
+    $('h6#author').html('<span>~ </span>' + quotes[$currentQuote].author);
+
+});
+
+$prevQuote.click( function(){
+   $currenetQuote = parseInt(quoteIndex.innerText)
+
+   if($currentQuote > 0){
+      $currentQuote--;
+   }else if($currentQuote == 0){
+      $currentQuote = quotes.length;
+   }
+   quoteIndex.innerText = $currentQuote;
+   $('h1#quote').html(quotes[$currentQuote].quote);
+   $('h6#author').html('<span>~ </span>' + quotes[$currentQuote].author);
 });
