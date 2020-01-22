@@ -1310,20 +1310,22 @@ let quotes = [
    '#66664D', '#991AFF', '#E666FF', '#4DB3FF', '#1AB399',
    '#E666B3', '#33991A', '#CC9999', '#B3B31A', '#00E680', 
    '#4D8066', '#809980', '#E6FF80', '#1AFF33', '#999933',
-   '#FF3380', '#CCCC00', '#66E64D', '#4D80CC', '#9900B3', 
-   '#E64D66', '#4DB380', '#FF4D4D', '#99E6E6', '#6666FF',
-   '#1abc9c', '#2ecc71', '#3498db', '#9b59b6', '#34495e',
-   '#16a085', '#27ae60', '#2980b9', '#8e44ad', '#2c3e50',
-   '', '',  
+   '#FF3380', '#CCCC00', '#66E64D', '#9900B3', 
+   '#1abc9c', '#2ecc71', '#9b59b6', '#34495e',
+   '#16a085', '#27ae60', '#8e44ad', '#2c3e50',
  ]
 
  let colors = [
- 'rgba(211, 84, 0, 0.4)', 'rgba(192, 57, 43, 0.4)',
- 'rgba(189, 195, 199, 0.4)', ' rgba(127, 140, 141, 0.4)',
+ 'rgba(211, 84, 0, 0.4)',   'rgba(192, 57, 43, 0.4)',
+ 'rgba(189, 195, 199, 0.4)', 'rgba(127, 140, 141, 0.4)',
  'rgba(243, 156, 18, 0.4)', 'rgba(149, 165, 166, 0.4)',
- 'rgba(231, 76, 60, 0.4)', 'rgba(230, 126, 34, 0.4)',
- 'rgba(241, 196, 15, 0.4)'
-
+ 'rgba(231, 76, 60, 0.4)',  'rgba(230, 126, 34, 0.4)',
+ 'rgba(241, 196, 15, 0.4)', 'rgba(44, 62, 80, 0.4)', 
+ 'rgba(155, 89, 182, 0.4)', 'rgba(255, 77, 77, 0.4)',
+ 'rgba(77, 179, 128, 0.4)', 'rgba(41, 128, 185, 0.4)',
+ 'rgba(230, 77, 102, 0.4)', 'rgba(52, 152, 219, 0.4)',
+ 'rgba(77, 128, 204, 0.4)', 'rgba(153, 230, 230, 0.4)',
+ 'rgba(102, 102, 255, 0.4)'
 ];
 
  let fonts = [
@@ -1432,3 +1434,36 @@ $prevQuote.click( function(){
    $('h1#quote').html(quotes[$currentQuote].quote);
    $('h6#author').html('<span>~ </span>' + quotes[$currentQuote].author);
 });
+
+var newLink = document.querySelectorAll("#mobileNavigation > a");
+for( i = 0; i <= newLink.length; i++){
+    newLink[i].style.display = "none";
+}
+
+function showMenu(params) {
+
+   document.getElementById("menu").style.display = "none";
+
+   document.getElementById("times").style.display = "block"
+
+   document.getElementById("mobileNavigation").style.height = "100vh"
+
+   document.getElementById("mobileNavigation").style.display = "flex";
+
+}
+
+function closeMenu(params) {
+
+   document.getElementById("menu").style.display ="block";
+
+   document.getElementById("times").style.display = "none";
+
+   document.getElementById("mobileNavigation").style.height = "0vh";
+
+   document.getElementById("mobileNavigation").style.display = "none";
+
+   for( i = 0; i <= newLink.length; i++){
+       newLink[i].style.display = "flex";
+   }
+
+}

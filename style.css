@@ -14,8 +14,8 @@ body{
     position: relative;
 }
 
-header{
-    height: 5%;
+nav{
+    height: 15vh;
     width: 100vw;
     background-color: white;
     z-index: 20000;
@@ -27,12 +27,128 @@ header{
 
 }
 
-.fa-bars{
+
+nav > .logo{
+    display: flex;
+    /* border: 1px solid green; */
+    width: 30%;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+nav > #navigation > a{
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+    color: black;
+    justify-content: space-between;
+    /* height: 75%; */
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 550;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+nav > #navigation{
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+}
+
+nav > .logo > i{
+    color: black;
+    font-size: 20px;
+    display: none;
+}
+
+
+#mobileNavigation{
+    height: 0vh;
+    width: 50% !important;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    position: fixed;
+    top: 80px;
+    z-index: 2000000;
+
+}
+
+#mobileNavigation > a{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+    color: black;
+    justify-content: space-between;
+    /* height: 75%; */
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 550;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+
+@media screen and (max-width: 800px){
+
+    nav{
+        height: 0vh !important;
+        width: 100vw;
+        background-color: white;
+        z-index: 20000;
+        position: absolute;
+        top: 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+    }
+
+    nav > #navigation{
+        display: none;
+    }
+
+    .wrapper{
+        padding: 0px;
+    }
+
+   nav > .logo{
+        width: 100%;
+        height: 10vh;
+        background-color: white;
+        z-index: 20000;
+        position: absolute;
+        top: 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+
+    nav > .logo > .fa-bars{
+        display: block;
+    }
+
+    nav > .logo > .fa-times{
+        display: none;
+    }
+}
+
+i{
     padding: 20px;
     font-size: 20px;
 }
 
-header h1{
+nav > .logo > h1{
     padding: 30px;
     font-family: cursive;
     font-size: 25px;
