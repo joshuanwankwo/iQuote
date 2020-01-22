@@ -19,12 +19,11 @@ nav{
     width: 100vw;
     background-color: white;
     z-index: 20000;
-    position: absolute;
+    position: fixed;
     top: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 
