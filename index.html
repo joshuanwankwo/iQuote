@@ -18,7 +18,7 @@
             <i onclick="showMenu()" id="menu" class="fas fa-bars"></i>
             <i onclick="closeMenu()" id="times" class="fas fa-times"></i>        </div>
         <div id="navigation">
-            <a href="#">WhatsApp Web</a>
+            <!-- <a href="#">WhatsApp Web</a> -->
             <a href="#">Features</a>
             <a href="#">Download</a>
             <a href="#">Security</a>
@@ -26,7 +26,7 @@
             <a href="#">Login</a>
         </div>
         <div id="mobileNavigation">
-            <a href="#">WhatsApp Web</a>
+            <!-- <a href="#">WhatsApp Web</a> -->
             <a href="#">Features</a>
             <a href="#">Download</a>
             <a href="#">Security</a>
@@ -35,28 +35,30 @@
         </div>
     </nav>
 
-    <main>
-        <div id="outerCont">
-            <div id="qouteContainer" >
-                <h1 id="quote">If your Dreams don't scare you, then they are not big enough</h1>
-                <h6 id="author">~Steve Josh</h6>
-                <span id="quoteIndex" style="color:white; display:none"></span>
+    <section>
+        <main>
+            <div id="outerCont">
+                <div id="qouteContainer" >
+                    <h1 id="quote">If your Dreams don't scare you, then they are not big enough</h1>
+                    <h6 id="author">~Steve Josh</h6>
+                    <span id="quoteIndex" style="color:white; display:none"></span>
+                </div>
+            </div>
+        </main>
+        <div id="control">
+            <div id="mainControl">
+                <i class="prevBtn fas fa-angle-left" id="btnLeft" title="See previous quote"></i>
+                <i class="randomBtn fas fa-random" title="View randomly"></i>
+                <i class="nextBtn fas fa-angle-right" id="btnRight" title="See next quote"></i>
+            </div>
+    
+            <div id="moreControl">
+                <i class="fontBtn fas fa-font" title="Chage your font style"></i> 
+                <i class="bgimgBtn fas fa-image" title="Change your background image"></i>  
+                <i class="bgBtn fas fa-eye-dropper" title="Change card background color"></i>
             </div>
         </div>
-    </main>
-    <div id="control">
-        <div id="mainControl">
-            <i class="prevBtn fas fa-angle-left" id="btnLeft" title="See previous quote"></i>
-            <i class="randomBtn fas fa-random" title="View randomly"></i>
-            <i class="nextBtn fas fa-angle-right" id="btnRight" title="See next quote"></i>
-        </div>
-
-        <div id="moreControl">
-            <i class="fontBtn fas fa-font" title="Chage your font style"></i> 
-            <i class="bgimgBtn fas fa-image" title="Change your background image"></i>  
-            <i class="bgBtn fas fa-eye-dropper" title="Change card background color"></i>
-        </div>
-    </div>
+    </section>
 
 </body>
 <script src="script.js"></script>

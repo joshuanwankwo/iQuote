@@ -1440,7 +1440,7 @@ for( i = 0; i <= newLink.length; i++){
     newLink[i].style.display = "none";
 }
 
-function showMenu(params) {
+function showMenu() {
 
    document.getElementById("menu").style.display = "none";
 
@@ -1452,7 +1452,7 @@ function showMenu(params) {
 
 }
 
-function closeMenu(params) {
+function closeMenu() {
 
    document.getElementById("menu").style.display ="block";
 

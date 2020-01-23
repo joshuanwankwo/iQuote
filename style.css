@@ -41,7 +41,7 @@ nav > #navigation > a{
     /* border: 1px solid green; */
     display: flex;
     flex-direction: column;
-    padding: 10px 0px;
+    padding: 5px 0px;
     color: black;
     justify-content: space-between;
     /* height: 75%; */
@@ -140,11 +140,35 @@ nav > .logo > i{
     nav > .logo > .fa-times{
         display: none;
     }
+
+    section{
+        height: calc(100vh - 0vh) !important;
+        width: inherit;
+        margin-top: auto;
+    
+    }
+
+    main{
+        height: 70% !important;
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(./imgs/img19.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    #control{
+        width: 100% !important;
+        height: 30% !important;
+        bottom: 0px;
+    }
 }
 
 i{
     padding: 20px;
-    font-size: 20px;
 }
 
 nav > .logo > h1{
@@ -184,11 +208,18 @@ nav > .logo > h1{
     padding: 10px;
 }
 
+section{
+    height: calc(100vh - 15vh);
+    width: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: auto;
+
+}
+
 main{
-    height: calc(100vh - 30vh);
-    width: 100%;
-    position: absolute;
-    top: 0px;
+    height: 100%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -199,9 +230,8 @@ main{
 }
 
 #control{
-    width: 100%;
-    height: calc(100vh - 70vh);
-    position: absolute;
+    width: 50%;
+    height: 100%;
     bottom: 0px;
 }
 
@@ -215,7 +245,7 @@ main{
 }
 
 #mainControl > i{
-    font-size: 30px;
+    font-size: 25px;
 }
 
 #moreControl{
@@ -227,9 +257,10 @@ main{
 }
 
 #moreControl > i{
-    font-size: 30px;
+    font-size: 25px;
 }
 
 i:hover{
     cursor: pointer;
 }
+
