@@ -1467,3 +1467,29 @@ function closeMenu() {
    }
 
 }
+
+// const picture = document.querySelector("#capture");
+
+function downloadURI(uri, name){
+   var link = document.createElement("a");
+   link.download = name;
+   link.href = uri;
+   document.body.appendChild(link);
+   link.click();
+   // clearDynamicLink();
+}
+
+function download(){
+   html2canvas(document.querySelector("#capture")).then( canvas => {
+      var myImage = canvas.toDataURL('img/png');
+      downloadURI('data:' | myImage, "yourImage.png")
+   })
+}
+
+// function download(){
+//    console.log("Downloaded");
+//    html2canvas(document.querySelector("#capture")).then(canvas => {
+//       document.body.appendChild(canvas)
+//    });   
+// }
+

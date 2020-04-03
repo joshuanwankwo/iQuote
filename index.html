@@ -36,7 +36,7 @@
     </nav>
 
     <section>
-        <main>
+        <main id="capture">
             <div id="outerCont">
                 <div id="qouteContainer" >
                     <h1 id="quote">If your Dreams don't scare you, then they are not big enough</h1>
@@ -51,7 +51,9 @@
                 <i class="randomBtn fas fa-random" title="View randomly"></i>
                 <i class="nextBtn fas fa-angle-right" id="btnRight" title="See next quote"></i>
             </div>
-    
+            <div id="action">
+                <i class="fas fa-cloud-download-alt" id="download" onclick="download()"></i>
+            </div>
             <div id="moreControl">
                 <i class="fontBtn fas fa-font" title="Chage your font style"></i> 
                 <i class="bgimgBtn fas fa-image" title="Change your background image"></i>  
@@ -61,5 +63,6 @@
     </section>
 
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.js"></script>
 <script src="script.js"></script>
 </html>
