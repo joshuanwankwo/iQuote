@@ -1436,8 +1436,8 @@ $prevQuote.click( function(){
 });
 
 var newLink = document.querySelectorAll("#mobileNavigation > a");
-for( i = 0; i <= newLink.length; i++){
-    newLink[i].style.display = "none";
+for( i = 0; i < newLink.length; i++){
+    newLink.item(i).style.display = "none";
 }
 
 function showMenu() {
@@ -1449,10 +1449,14 @@ function showMenu() {
    document.getElementById("mobileNavigation").style.height = "100vh"
 
    document.getElementById("mobileNavigation").style.display = "flex";
+   for( i = 0; i < newLink.length; i++){
+       newLink.item(i).style.display = "flex"
+   }
+
 
 }
 
-function closeMenu() {
+function closeMenu(params) {
 
    document.getElementById("menu").style.display ="block";
 
@@ -1462,13 +1466,13 @@ function closeMenu() {
 
    document.getElementById("mobileNavigation").style.display = "none";
 
-   for( i = 0; i <= newLink.length; i++){
-       newLink[i].style.display = "flex";
+   for( i = 0; i < newLink.length; i++){
+      newLink.item(i).style.display = "none"
    }
 
 }
 
-const picture = document.querySelector("#capture");
+var picture = document.querySelector("#capture");
 
 function downloadURI(uri, name){
    var link = document.createElement("a");
@@ -1476,11 +1480,11 @@ function downloadURI(uri, name){
    link.href = uri;
    document.body.appendChild(link);
    link.click();
-   // clearDynamicLink(link);
+   clearDynamicLink(link);
 }
 
 function download(){
-   html2canvas(document.querySelector("#capture")).then( canvas => {
+   html2canvas(picture).then(canvas => {
       var myImage = canvas.toDataURL('img/png');
       downloadURI('data:' + myImage, "yourImage.png")
    })

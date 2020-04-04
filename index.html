@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <script src="https://kit.fontawesome.com/8470b880ab.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="../jquery-3.4.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/8470b880ab.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>iQuote</title>
 </head>
+
 <body>
     <nav>
 
@@ -16,7 +17,8 @@
             <!-- <img src="./assets/logo.svg" alt=""> -->
             <h1>iLu</h1>
             <i onclick="showMenu()" id="menu" class="fas fa-bars"></i>
-            <i onclick="closeMenu()" id="times" class="fas fa-times"></i>        </div>
+            <i onclick="closeMenu()" id="times" class="fas fa-times"></i>
+        </div>
         <div id="navigation">
             <!-- <a href="#">WhatsApp Web</a> -->
             <a href="#">Features</a>
@@ -38,7 +40,7 @@
     <section>
         <main id="capture">
             <div id="outerCont">
-                <div id="qouteContainer" >
+                <div id="qouteContainer">
                     <h1 id="quote">If your Dreams don't scare you, then they are not big enough</h1>
                     <h6 id="author">~Steve Josh</h6>
                     <span id="quoteIndex" style="color:white; display:none"></span>
@@ -55,14 +57,18 @@
                 <i class="fas fa-cloud-download-alt" id="download" onclick="download()"></i>
             </div>
             <div id="moreControl">
-                <i class="fontBtn fas fa-font" title="Chage your font style"></i> 
-                <i class="bgimgBtn fas fa-image" title="Change your background image"></i>  
+                <i class="fontBtn fas fa-font" title="Chage your font style"></i>
+                <i class="bgimgBtn fas fa-image" title="Change your background image"></i>
                 <i class="bgBtn fas fa-eye-dropper" title="Change card background color"></i>
             </div>
         </div>
     </section>
 
 </body>
-<script src="node_modules\html2canvas\dist\html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous">
+    </script>
 <script src="script.js"></script>
 </html>
