@@ -1468,7 +1468,7 @@ function closeMenu() {
 
 }
 
-// const picture = document.querySelector("#capture");
+const picture = document.querySelector("#capture");
 
 function downloadURI(uri, name){
    var link = document.createElement("a");
@@ -1476,20 +1476,14 @@ function downloadURI(uri, name){
    link.href = uri;
    document.body.appendChild(link);
    link.click();
-   // clearDynamicLink();
+   // clearDynamicLink(link);
 }
 
 function download(){
    html2canvas(document.querySelector("#capture")).then( canvas => {
       var myImage = canvas.toDataURL('img/png');
-      downloadURI('data:' | myImage, "yourImage.png")
+      downloadURI('data:' + myImage, "yourImage.png")
    })
 }
 
-// function download(){
-//    console.log("Downloaded");
-//    html2canvas(document.querySelector("#capture")).then(canvas => {
-//       document.body.appendChild(canvas)
-//    });   
-// }
 
