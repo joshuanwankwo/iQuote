@@ -1485,7 +1485,7 @@ function downloadURI(uri, name){
 
 function download(){
    html2canvas(picture).then(canvas => {
-      var myImage = canvas.toDataURL('img/png');
+      var myImage = canvas.toDataURL('img/png/jpeg');
       downloadURI('data:' + myImage, "yourImage.png")
    })
 }
