@@ -1480,7 +1480,7 @@ function downloadURI(uri, name){
    link.href = uri;
    document.body.appendChild(link);
    link.click();
-   clearDynamicLink(link);
+   // clearDynamicLink(link);
 }
 
 function download(){

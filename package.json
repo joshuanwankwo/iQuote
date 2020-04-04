@@ -1,0 +1,22 @@
+{
+  "name": "iqoute",
+  "version": "1.0.0",
+  "description": "A simple web App that allow users to generate quotes randomly or accordingly, it also give user the control to change background images, quote box background color, font family and more.  I;m sure you would like to check it out!!",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshuanwankwo/iQuote.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshuanwankwo/iQuote/issues"
+  },
+  "homepage": "https://github.com/joshuanwankwo/iQuote#readme",
+  "dependencies": {
+    "html2canvas": "^1.0.0-rc.5"
+  }
+}
