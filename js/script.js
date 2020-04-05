@@ -1480,7 +1480,7 @@ function downloadURI(uri, name){
    link.href = uri;
    document.body.appendChild(link);
    link.click();
-   // clearDynamicLink(link);
+   clearDynamicLink(link);
 }
 
 function download(){
@@ -1490,4 +1490,6 @@ function download(){
    })
 }
 
-
+document.getElementById('logo').addEventListener('click', function(){
+   window.location.href = "index.html";
+})
