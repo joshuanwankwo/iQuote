@@ -32,11 +32,45 @@
             <a href="login.html">Login</a>
         </div>
     </nav>
-
-
+    <main>
+        <aside>
+            <ul>
+                <li onclick="showbackDesc()">
+                    <i class="fas fa-angle-left"></i>
+                </li>
+                <li onclick="showRdmDesc()">
+                    <i class="fas fa-random" ></i>
+                </li>
+                <li onclick="showForwardDesc()">
+                    <i class="fas fa-angle-right"></i>
+                </li>
+                <li onclick="showDownloadDesc()">
+                    <i class="fas fa-cloud-download-alt" ></i>
+                </li>
+                <li onclick="showFontDesc()">
+                    <i class="fas fa-font" ></i>
+                </li>
+                <li onclick="showBgImgDesc()">
+                    <i class="fas fa-image" ></i>
+                </li>
+                <li onclick="showCardColorDesc()">
+                    <i class="fas fa-eye-dropper" ></i>
+                </li>
+            </ul>
+        </aside>
+        <div id="display">
+            <h1 class=" "  id="backBtn">Move one step backward</h1>
+            <h1 class=" descText"  id="rdmBtn">Generate randomly</h1>
+            <h1 class=" descText"  id="forwardBtn">Move one step forward</h1>
+            <h1 class=" descText"  id="downloadBtn">Download Your customised image</h1>
+            <h1 class=" descText"  id="styleBtn">Change your font style</h1>
+            <h1 class=" descText"  id="bgImageBtn">Change your background image</h1>
+            <h1 class=" descText"  id="cardColorBtn">Change card color</h1>
+        </div>
+    </main>
 
 </body>
-<script src="./js/html2canvas.min.js" crossorigin="anonymous"></script>
+<script src="./js/feature.js" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous">
     </script>

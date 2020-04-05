@@ -11,7 +11,7 @@ body{
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    /* position: relative; */
+    position: relative;
 }
 
 nav{
@@ -262,10 +262,11 @@ main{
 #action{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 #download{
-    width: 100%;
+    /* width: 100%; */
     font-size: 25px;
     display: flex;
     justify-content: center;
